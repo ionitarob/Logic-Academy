@@ -5,30 +5,20 @@ document.addEventListener('DOMContentLoaded', function () {
             delay: 10000, // Cambia de imagen cada 10 segundos
         },
     });
+
+    // Mostrar el contenido principal después de la inicialización
+    const mainContent = document.getElementById('main-content');
+    mainContent.style.display = 'block';
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('login-form');
 
     loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-
-        const email = emailInput.value;
-        const password = passwordInput.value;
-
-        // Verificar las credenciales
-        if ((email === 'admin@admin.com' && password === 'Start12345') || (email === 'user@user.com' && password === 'Password')) {
-            // Credenciales válidas, redirigir a la página principal
-            window.location.href = '../Dashboard/dashboard.html';
-        } else {
-            // Credenciales incorrectas, mostrar un mensaje de error
-            alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
-        }
+        // No se necesita la lógica de verificación aquí
     });
 });
+
 
 function handleLogin() {
     const usernameInput = document.getElementById('username');
